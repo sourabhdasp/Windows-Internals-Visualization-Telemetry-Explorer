@@ -1,0 +1,102 @@
+TelemetryExplorer Compilation Fixes - Changes Applied
+=====================================================
+
+Date: 2026-05-31
+Task: Fix compilation errors to enable building with cl.exe
+
+FILES MODIFIED:
+--------------
+
+1. TelemetryExplorer/syscall_intelligence/syscall_info.hpp
+   - Line 50: Fixed "SYSCALL_NtCreate Mutant" to "SYSCALL_NtCreateMutant" (removed space)
+   - Fixes: syntax error, enum parsing issue
+
+2. TelemetryExplorer/memory_intelligence/memory_info.hpp
+   - Rewrote MemoryRiskFlags to use enum class instead of int
+   - Changed operators to use MemoryRiskFlag enum class
+   - Added type alias: using MemoryRiskFlags = MemoryRiskFlag;
+   - Fixes: nonmember operator errors, NONE undeclared identifier
+
+3. TelemetryExplorer/dll_intelligence/dll_info.hpp
+   - Rewrote DLLRiskFlags to use enum class instead of int
+   - Changed operators to use DLLRiskFlag enum class
+   - Added type alias: using DLLRiskFlags = DLLRiskFlag;
+   - Fixes: cannot convert argument errors, nonmember operator errors
+
+4. TelemetryExplorer/memory_intelligence/memory_database.hpp
+   - Added: using MemoryMap = std::unordered_map<uintptr_t, MemoryRegionInfo>;
+   - Added: using PID_MemoryMap = std::unordered_map<DWORD, MemoryMap>;
+   - Renamed: GetRegionsForProcess -> GetRegionsForProcessAsMap (to fix overload conflict)
+   - Fixes: identifier undefined, redefinition errors, overload by return type
+
+5. TelemetryExplorer/memory_intelligence/memory_database.cpp
+   - Updated function name to match header: GetRegionsForProcess -> GetRegionsForProcessAsMap
+
+6. TelemetryExplorer/TelemetryExplorer.vcxproj
+   - Added <CppStandard>std:c++17</CppStandard> to all 4 configurations:
+     * Debug|Win32 (line 79)
+     * Release|Win32 (line 94)
+     * Debug|x64 (line 107)
+     * Release|x64 (line 122)
+   - Fixes: std::filesystem not found, std::mutex not found
+
+FILES CREATED:
+-------------
+
+1. build_cl.bat
+   - Complete build script for cl.exe compilation
+   - Includes all source files from all 11 phases
+   - Proper C++17 flags and include paths
+
+2. COMPILATION_FIXES.md
+   - Detailed documentation of all fixes
+   - Build instructions for Windows
+   - Troubleshooting guide
+
+3. COMPILATION_FIXES_SUMMARY.md
+   - Comprehensive summary of all changes
+   - Technical details and explanations
+
+4. CHANGES_APPLIED.txt (this file)
+   - Quick reference of all changes made
+
+ERRORS FIXED:
+------------
+
+✅ Syntax errors (syscall enum space issue)
+✅ Type definition errors (MemoryRiskFlags, DLLRiskFlags)
+✅ Missing type aliases (MemoryMap, PID_MemoryMap)
+✅ Function overload conflicts (GetRegionsForProcess)
+✅ C++17 enablement (std::filesystem, std::mutex)
+
+REMAINING ISSUES:
+----------------
+
+⚠️ Missing Windows headers (evntrptr.h, openssl/md5.h) - Requires WDK/OpenSSL
+⚠️ Function redefinitions (GetThreadPriority) - Needs consolidation
+⚠️ Incomplete type definitions - Needs forward declarations
+⚠️ Missing function implementations - Needs code completion
+
+These are pre-existing issues in the original Phases 1-10 codebase.
+
+BUILD INSTRUCTIONS:
+-----------------
+
+1. Open Visual Studio 2022
+2. Open TelemetryExplorer/TelemetryExplorer.sln
+3. Build solution (Ctrl+Shift+B)
+
+OR use command line:
+   - Open "Developer Command Prompt for VS 2022"
+   - cd to project directory
+   - Run: build_cl.bat
+
+PREREQUISITES:
+-------------
+
+- Windows 10/11
+- Visual Studio 2022 with C++ workload
+- Windows 10/11 SDK
+- (Optional) Windows Driver Kit for kernel features
+- (Optional) OpenSSL for hash functions
+

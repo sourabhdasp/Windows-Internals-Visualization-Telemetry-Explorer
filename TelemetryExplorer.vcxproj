@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{58c2f434-81f3-4912-8d2a-18de0c110a69}</ProjectGuid>
+    <RootNamespace>TelemetryExplorer</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <CppStandard>std:c++17</CppStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <CppStandard>std:c++17</CppStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <CppStandard>std:c++17</CppStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <CppStandard>std:c++17</CppStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <!-- Main Source Files -->
+    <ClCompile Include="detection.cpp" />
+    <ClCompile Include="etw.cpp" />
+    <ClCompile Include="gui.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="memory.cpp" />
+    <ClCompile Include="modules.cpp" />
+    <ClCompile Include="peb.cpp" />
+    <ClCompile Include="process.cpp" />
+    <ClCompile Include="threades.cpp" />
+    
+    <!-- Process Intelligence Engine -->
+    <ClCompile Include="process_intelligence\process_info.cpp" />
+    <ClCompile Include="process_intelligence\process_database.cpp" />
+    <ClCompile Include="process_intelligence\lineage_detector.cpp" />
+    <ClCompile Include="process_intelligence\session_tracker.cpp" />
+    
+    <!-- Thread Intelligence Engine -->
+    <ClCompile Include="thread_intelligence\thread_info.cpp" />
+    <ClCompile Include="thread_intelligence\thread_database.cpp" />
+    <ClCompile Include="thread_intelligence\thread_monitor.cpp" />
+    <ClCompile Include="thread_intelligence\stack_walker.cpp" />
+    
+    <!-- Memory Intelligence Engine -->
+    <ClCompile Include="memory_intelligence\memory_info.cpp" />
+    <ClCompile Include="memory_intelligence\memory_database.cpp" />
+    <ClCompile Include="memory_intelligence\memory_monitor.cpp" />
+    <ClCompile Include="memory_intelligence\entropy_analysis.cpp" />
+    
+    <!-- DLL Intelligence Engine -->
+    <ClCompile Include="dll_intelligence\dll_info.cpp" />
+    <ClCompile Include="dll_intelligence\dll_database.cpp" />
+    
+    <!-- Command Line Intelligence Engine (Phase 5) -->
+    <ClCompile Include="commandline_intelligence\commandline_info.cpp" />
+    <ClCompile Include="commandline_intelligence\commandline_database.cpp" />
+    <ClCompile Include="commandline_intelligence\commandline_analyzer.cpp" />
+    <ClCompile Include="commandline_intelligence\commandline_monitor.cpp" />
+    
+    <!-- Injection Intelligence Engine (Phase 6) -->
+    <ClCompile Include="injection_intelligence\injection_info.cpp" />
+    <ClCompile Include="injection_intelligence\injection_database.cpp" />
+    <ClCompile Include="injection_intelligence\injection_detector.cpp" />
+    <ClCompile Include="injection_intelligence\injection_monitor.cpp" />
+
+    <!-- Detection Intelligence Engine (Phase 9) -->
+    <ClCompile Include="detection_intelligence\detection_info.cpp" />
+    <ClCompile Include="detection_intelligence\detection_database.cpp" />
+    <ClCompile Include="detection_intelligence\detection_engine.cpp" />
+    <ClCompile Include="detection_intelligence\detection_correlator.cpp" />
+    <ClCompile Include="detection_intelligence\detection_graph.cpp" />
+
+    <!-- Syscall Intelligence Engine (Phase 7) -->
+    <ClCompile Include="syscall_intelligence\syscall_info.cpp" />
+    <ClCompile Include="syscall_intelligence\syscall_database.cpp" />
+    <ClCompile Include="syscall_intelligence\syscall_monitor.cpp" />
+    <ClCompile Include="syscall_intelligence\syscall_detector.cpp" />
+
+    <!-- Kernel Intelligence Engine (Phase 8) -->
+    <ClCompile Include="kernel_intelligence\kernel_info.cpp" />
+    <ClCompile Include="kernel_intelligence\kernel_database.cpp" />
+    <ClCompile Include="kernel_intelligence\kernel_monitor.cpp" />
+    <ClCompile Include="kernel_intelligence\kernel_detector.cpp" />
+
+    <!-- Forensics Intelligence Engine (Phase 10) -->
+    <ClCompile Include="forensics_intelligence\forensics_info.cpp" />
+    <ClCompile Include="forensics_intelligence\forensics_database.cpp" />
+    <ClCompile Include="forensics_intelligence\forensics_monitor.cpp" />
+    <ClCompile Include="forensics_intelligence\forensics_extractor.cpp" />
+
+    <!-- Production Intelligence Engine (Phase 11) -->
+    <ClCompile Include="production_intelligence\production_info.cpp" />
+    <ClCompile Include="production_intelligence\production_database.cpp" />
+    <ClCompile Include="production_intelligence\production_monitor.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Main Header Files -->
+    <ClInclude Include="native.hpp" />
+    <ClInclude Include="telemetry.hpp" />
+    <ClInclude Include="detection.hpp" />
+    <ClInclude Include="etw.hpp" />
+    <ClInclude Include="gui.hpp" />
+    
+    <!-- Process Intelligence Headers -->
+    <ClInclude Include="process_intelligence\process_info.hpp" />
+    <ClInclude Include="process_intelligence\process_database.hpp" />
+    <ClInclude Include="process_intelligence\lineage_detector.hpp" />
+    <ClInclude Include="process_intelligence\session_tracker.hpp" />
+    
+    <!-- Thread Intelligence Headers -->
+    <ClInclude Include="thread_intelligence\thread_info.hpp" />
+    <ClInclude Include="thread_intelligence\thread_database.hpp" />
+    <ClInclude Include="thread_intelligence\thread_monitor.hpp" />
+    <ClInclude Include="thread_intelligence\stack_walker.hpp" />
+    
+    <!-- Memory Intelligence Headers -->
+    <ClInclude Include="memory_intelligence\memory_info.hpp" />
+    <ClInclude Include="memory_intelligence\memory_database.hpp" />
+    <ClInclude Include="memory_intelligence\memory_monitor.hpp" />
+    <ClInclude Include="memory_intelligence\entropy_analysis.hpp" />
+    
+    <!-- DLL Intelligence Headers -->
+    <ClInclude Include="dll_intelligence\dll_info.hpp" />
+    <ClInclude Include="dll_intelligence\dll_database.hpp" />
+    <ClInclude Include="dll_intelligence\dll_monitor.hpp" />
+    
+    <!-- Command Line Intelligence Headers (Phase 5) -->
+    <ClInclude Include="commandline_intelligence\commandline_info.hpp" />
+    <ClInclude Include="commandline_intelligence\commandline_database.hpp" />
+    <ClInclude Include="commandline_intelligence\commandline_analyzer.hpp" />
+    <ClInclude Include="commandline_intelligence\commandline_monitor.hpp" />
+    
+    <!-- Injection Intelligence Headers (Phase 6) -->
+    <ClInclude Include="injection_intelligence\injection_info.hpp" />
+    <ClInclude Include="injection_intelligence\injection_database.hpp" />
+    <ClInclude Include="injection_intelligence\injection_detector.hpp" />
+    <ClInclude Include="injection_intelligence\injection_monitor.hpp" />
+
+    <!-- Detection Intelligence Headers (Phase 9) -->
+    <ClInclude Include="detection_intelligence\detection_info.hpp" />
+    <ClInclude Include="detection_intelligence\detection_database.hpp" />
+    <ClInclude Include="detection_intelligence\detection_engine.hpp" />
+    <ClInclude Include="detection_intelligence\detection_correlator.hpp" />
+    <ClInclude Include="detection_intelligence\detection_graph.hpp" />
+
+    <!-- Syscall Intelligence Headers (Phase 7) -->
+    <ClInclude Include="syscall_intelligence\syscall_info.hpp" />
+    <ClInclude Include="syscall_intelligence\syscall_database.hpp" />
+    <ClInclude Include="syscall_intelligence\syscall_monitor.hpp" />
+    <ClInclude Include="syscall_intelligence\syscall_detector.hpp" />
+
+    <!-- Kernel Intelligence Headers (Phase 8) -->
+    <ClInclude Include="kernel_intelligence\kernel_info.hpp" />
+    <ClInclude Include="kernel_intelligence\kernel_database.hpp" />
+    <ClInclude Include="kernel_intelligence\kernel_monitor.hpp" />
+    <ClInclude Include="kernel_intelligence\kernel_detector.hpp" />
+
+    <!-- Forensics Intelligence Headers (Phase 10) -->
+    <ClInclude Include="forensics_intelligence\forensics_info.hpp" />
+    <ClInclude Include="forensics_intelligence\forensics_database.hpp" />
+    <ClInclude Include="forensics_intelligence\forensics_monitor.hpp" />
+    <ClInclude Include="forensics_intelligence\forensics_extractor.hpp" />
+
+    <!-- Production Intelligence Headers (Phase 11) -->
+    <ClInclude Include="production_intelligence\production_info.hpp" />
+    <ClInclude Include="production_intelligence\production_database.hpp" />
+    <ClInclude Include="production_intelligence\production_monitor.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
